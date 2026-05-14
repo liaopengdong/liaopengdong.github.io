@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BayMaxHome Tools</title>
+  <meta name="description" content="A collection of free browser-based tools for business, developers, images, content, finance, SEO, and PDF workflows.">
+  <style>
+    :root {
+      --ink: #172018;
+      --muted: #667263;
+      --paper: #fffdf4;
+      --line: #dfe7d8;
+      --brand: #1f7a4d;
+      --soft: #edf7e9;
+      --shadow: 0 18px 50px rgba(23, 32, 24, .09);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top left, #f7f1d1, transparent 34rem), linear-gradient(180deg, #fffdf4, #f5f8ef);
+      line-height: 1.55;
+    }
+    header, main, footer { padding: clamp(1.2rem, 5vw, 5rem); }
+    .brand { font-weight: 800; color: var(--brand); letter-spacing: .04em; text-transform: uppercase; }
+    h1 { max-width: 980px; font-size: clamp(2.5rem, 7vw, 5.8rem); line-height: .96; letter-spacing: -.05em; margin: .6rem 0 1rem; }
+    .lead { max-width: 760px; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.25rem); }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .card {
+      display: block;
+      min-height: 170px;
+      padding: 1.25rem;
+      color: var(--ink);
+      text-decoration: none;
+      background: rgba(255,255,255,.88);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 20px 60px rgba(23,32,24,.13); }
+    .tag { display: inline-flex; padding: .2rem .55rem; border-radius: 999px; background: var(--soft); color: #125536; font-size: .78rem; font-weight: 700; }
+    h2 { margin: .8rem 0 .5rem; font-size: 1.35rem; }
+    .card p { margin: 0; color: var(--muted); }
+    footer { color: var(--muted); border-top: 1px solid var(--line); }
+    @media (max-width: 920px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">BayMaxHome Tools</div>
+    <h1>Free browser-based tools for everyday business, technical, and content workflows.</h1>
+    <p class="lead">Choose a tool collection below. Each project runs as a static GitHub Pages site and focuses on practical utilities that work directly in the browser.</p>
+  </header>
+  <main>
+    <section class="grid" aria-label="Tool collections">
+      <a class="card" href="business-tools/"><span class="tag">Business</span><h2>Business Tools</h2><p>Calculators for pricing, fees, freelance rates, cash flow, startup costs, and invoices.</p></a>
+      <a class="card" href="dev-tools/"><span class="tag">Developer</span><h2>Developer Tools</h2><p>Utilities for JSON, regex, timestamps, Base64, JWT, UUIDs, hashes, and API payloads.</p></a>
+      <a class="card" href="image-tools/"><span class="tag">Images</span><h2>Image Tools</h2><p>Image resizing, compression, conversion, metadata, favicons, and social image checks.</p></a>
+      <a class="card" href="content-tools/"><span class="tag">Content</span><h2>Content Tools</h2><p>Writing helpers for word count, slugs, case conversion, meta descriptions, subtitles, and UTM links.</p></a>
+      <a class="card" href="finance-tools/"><span class="tag">Finance</span><h2>Finance Calculators</h2><p>Personal finance calculators for interest, loans, mortgage, savings, retirement, salary, and debt.</p></a>
+      <a class="card" href="seo-tools/"><span class="tag">SEO</span><h2>SEO Tools</h2><p>SEO utilities for titles, meta descriptions, SERP previews, robots.txt, sitemaps, schema, and canonicals.</p></a>
+    </section>
+  </main>
+  <footer>
+    <p>(c) <span id="year"></span> BayMaxHome Tools. Tools are for practical estimates, formatting, and workflow support. Verify important outputs before relying on them.</p>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
